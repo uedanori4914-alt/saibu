@@ -249,18 +249,92 @@ body{font-family:'Inter','Noto Sans JP',sans-serif;background:#fff;color:#000;-w
 .f-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:26px;font-size:12px;font-weight:300;color:rgba(255,255,255,.18);display:flex;justify-content:space-between;font-family:'Noto Sans JP',sans-serif}
 
 @media(max-width:960px){
-  .site-header{padding:0 16px}
+  /* ヘッダー */
+  .site-header{padding:0 16px;height:54px}
   .site-nav{display:none}
   .nav-btns{gap:6px}
-  .hdr-btn{padding:6px 10px;font-size:12px}
-  .hero1-catch{left:24px}
-  .hero1-demo{left:24px;bottom:160px;max-width:calc(100% - 48px)}
-  .intro-sec,.inbox-sec{grid-template-columns:1fr;gap:48px;padding:72px 24px}
-  .spec-sec,.cta-sec{padding:72px 24px}
-  .site-footer{padding:60px 24px 40px}
-  .f-grid{grid-template-columns:1fr;gap:36px}
-  .f-bottom{flex-direction:column;gap:6px}
-  .clip-text{font-size:clamp(34px,10vw,80px)}
+  .hdr-btn{padding:6px 12px;font-size:12px;white-space:nowrap}
+
+  /* ヒーロー */
+  .hero1{height:100svh;min-height:500px}
+  .hero1-catch{
+    left:16px;right:16px;
+    top:auto;bottom:260px;
+    transform:none;
+    max-width:100%;
+  }
+  .hero1-catch-text{
+    font-size:clamp(24px,7vw,40px);
+    line-height:1.25;
+  }
+  .catch-badge{
+    font-size:12px;
+    padding:2px 10px;
+    display:block;
+    width:fit-content;
+    margin-top:8px;
+    margin-left:0;
+  }
+  .hero1-demo{
+    left:16px;right:16px;
+    bottom:16px;
+    max-width:100%;
+    padding:20px 20px;
+  }
+  .demo-title{font-size:16px}
+  .demo-sub{font-size:12px;margin-bottom:14px}
+  .btn-demo{padding:10px 24px;font-size:13px;width:100%;text-align:center;display:block}
+  .hero1-scroll{display:none}
+
+  /* スクロールズームセクション */
+  .scroll-zone{height:300vh}
+  .clip-text{font-size:clamp(34px,10vw,72px)}
+  .vid-text h2{font-size:clamp(36px,8vw,60px)}
+  .vid-text p{font-size:13px}
+  .watch-btn{padding:10px 24px;font-size:13px}
+
+  /* イントロ */
+  .intro-sec{
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:48px 20px;
+  }
+  .sec-h{font-size:clamp(22px,5vw,32px);margin-bottom:16px}
+  .sec-p{font-size:14px}
+
+  /* 同梱内容 */
+  .inbox-sec{
+    grid-template-columns:1fr;
+    gap:32px;
+    padding:48px 20px;
+  }
+  .inbox-h{font-size:clamp(22px,5vw,32px);margin-bottom:28px}
+  .inbox-list li{padding:14px 0}
+  .iname{font-size:14px}
+  .qty-r{font-size:12px}
+
+  /* 製品仕様 */
+  .spec-sec{padding:48px 20px}
+  .spec-h{font-size:clamp(22px,5vw,32px);margin-bottom:36px}
+  .spec-layout{grid-template-columns:1fr}
+  .spec-right{position:static;display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px}
+  .spec-tbl{max-width:100%}
+  .spec-tbl td{padding:14px 0;font-size:13px}
+  .spec-tbl td:first-child{width:42%;padding-right:16px}
+
+  /* CTA */
+  .cta-sec{padding:64px 20px}
+  .cta-h{font-size:clamp(28px,6vw,44px)}
+  .cta-p{font-size:14px}
+  .cta-note{font-size:11px}
+  .cta-btns{flex-direction:column;align-items:center}
+  .btn-w,.btn-g{width:100%;max-width:320px;text-align:center;padding:14px 20px}
+
+  /* フッター */
+  .site-footer{padding:48px 20px 32px}
+  .f-grid{grid-template-columns:1fr;gap:32px}
+  .f-bottom{flex-direction:column;gap:6px;font-size:11px}
+  .f-desc{max-width:100%}
 }
 
 .spec-layout{display:grid;grid-template-columns:1fr 760px;gap:40px;align-items:start}
