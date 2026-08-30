@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/png" href="data:image/png;base64,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">
+<title>Hydro6 故障・修理報告 作成ツール | サイブ株式会社</title>
+<style>
+  :root{
+    --bg:#F4F5F2;
+    --surface:#FFFFFF;
+    --surface-2:#EEF0EC;
+    --ink:#1C2521;
+    --ink-soft:#5B655F;
+    --ink-faint:#8B948E;
+    --line:#DADFD8;
+    --line-strong:#BFC7BE;
+    --teal:#0E6E77;
+    --teal-dark:#0A4F56;
+    --teal-tint:#E3F0EF;
+    --rust:#B84A24;
+    --rust-tint:#F7E7DF;
+    --radius:10px;
+    --font: "Noto Sans JP","Hiragino Sans",sans-serif;
+    --mono: "Roboto Mono", "Courier New", monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:var(--font);
+    background:var(--bg);
+    color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+    line-height:1.6;
+  }
+  .app{max-width:1180px;margin:0 auto;padding:28px 20px 80px;}
+
+  /* header */
+  .app-header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:22px;flex-wrap:wrap;}
+  .brand{display:flex;align-items:center;gap:14px;}
+  .digi{
+    font-family:var(--mono);
+    background:var(--ink);
+    color:#7CF2C4;
+    font-weight:700;
+    font-size:16px;
+    letter-spacing:1.5px;
+    padding:8px 12px;
+    border-radius:6px;
+    white-space:nowrap;
+  }
+  .brand h1{font-size:19px;font-weight:500;margin:0;}
+  .brand p{font-size:12.5px;color:var(--ink-soft);margin:2px 0 0;}
+  .header-actions{display:flex;gap:8px;flex-wrap:wrap;}
+
+  button{
+    font-family:var(--font);
+    cursor:pointer;
+  }
+  .btn{
+    border:1px solid var(--line-strong);
+    background:var(--surface);
+    color:var(--ink);
+    padding:9px 16px;
+    border-radius:8px;
+    font-size:13.5px;
+    font-weight:500;
+    transition:background .12s, transform .05s;
+  }
+  .btn:hover{background:var(--surface-2);}
+  .btn:active{transform:scale(.98);}
+  .btn.primary{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .btn.primary:hover{background:var(--teal-dark);}
+  .btn.ghost{border-color:transparent;background:transparent;color:var(--ink-soft);}
+  .btn.ghost:hover{background:var(--surface-2);}
+  .btn.danger-ghost{border-color:transparent;background:transparent;color:var(--rust);font-size:12.5px;padding:5px 10px;}
+  .btn.danger-ghost:hover{background:var(--rust-tint);}
+  .btn.small{padding:6px 12px;font-size:12.5px;}
+
+  /* layout */
+  .layout{display:grid;grid-template-columns:240px 1fr;gap:20px;align-items:start;}
+  @media (max-width:820px){.layout{grid-template-columns:1fr;}}
+
+  .sidebar{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:14px;
+    position:sticky;
+    top:20px;
+  }
+  @media (max-width:820px){.sidebar{position:static;}}
+  .sidebar h2{font-size:13px;font-weight:500;color:var(--ink-soft);margin:0 0 10px;text-transform:uppercase;letter-spacing:.03em;}
+  .search-input{
+    width:100%;font-family:var(--font);font-size:13px;color:var(--ink);
+    background:var(--bg);border:1px solid var(--line);border-radius:7px;
+    padding:8px 10px;margin-bottom:10px;
+  }
+  .search-input:focus{outline:2px solid var(--teal);outline-offset:0;border-color:var(--teal);}
+  .report-item{
+    display:flex;justify-content:space-between;align-items:flex-start;gap:6px;
+    padding:9px 8px;border-radius:7px;cursor:pointer;font-size:13px;
+    border:1px solid transparent;
+  }
+  .report-item:hover{background:var(--surface-2);}
+  .report-item.active{background:var(--teal-tint);border-color:var(--teal);}
+  .report-item .ri-title{font-weight:500;}
+  .report-item .ri-seq{
+    display:inline-block;font-family:var(--mono);font-size:10.5px;font-weight:700;
+    color:var(--teal-dark);background:var(--teal-tint);border-radius:4px;padding:1px 5px;margin-right:4px;
+  }
+  .report-item .ri-sub{color:var(--ink-faint);font-size:11.5px;margin-top:2px;}
+  .report-item .ri-del{background:none;border:none;color:var(--ink-faint);font-size:15px;line-height:1;padding:2px 4px;}
+  .report-item .ri-del:hover{color:var(--rust);}
+  .empty-list{color:var(--ink-faint);font-size:12.5px;padding:6px 8px;}
+
+  /* main panel */
+  .panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;}
+  .section{padding-bottom:22px;margin-bottom:22px;border-bottom:1px solid var(--line);}
+  .section:last-of-type{border-bottom:none;margin-bottom:0;}
+  .section-title{display:flex;align-items:baseline;gap:8px;margin:0 0 14px;}
+  .section-num{
+    font-family:var(--mono);font-size:12px;font-weight:700;color:var(--teal);
+    background:var(--teal-tint);border-radius:5px;padding:2px 7px;
+  }
+  .section-title h3{font-size:15px;font-weight:500;margin:0;}
+  .section-hint{font-size:12px;color:var(--ink-faint);margin:-8px 0 14px;}
+
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+  @media (max-width:600px){.grid2{grid-template-columns:1fr;}}
+  .field label{display:block;font-size:12.5px;color:var(--ink-soft);margin-bottom:5px;}
+  .field input, .field select, .field textarea{
+    width:100%;font-family:var(--font);font-size:14px;color:var(--ink);
+    background:var(--bg);border:1px solid var(--line);border-radius:7px;
+    padding:9px 10px;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{outline:2px solid var(--teal);outline-offset:0;border-color:var(--teal);}
+  .field.mono input{font-family:var(--mono);}
+
+  .dyn-row{display:flex;gap:8px;align-items:flex-start;margin-bottom:8px;}
+  .dyn-row textarea, .dyn-row input{flex:1;}
+  .dyn-row textarea{resize:vertical;min-height:38px;}
+  .rm-btn{
+    flex-shrink:0;width:32px;height:36px;border-radius:7px;border:1px solid var(--line);
+    background:var(--surface);color:var(--ink-faint);font-size:16px;line-height:1;
+  }
+  .rm-btn:hover{background:var(--rust-tint);color:var(--rust);border-color:var(--rust);}
+  .add-link{background:none;border:none;color:var(--teal);font-size:13px;font-weight:500;padding:6px 0;}
+  .add-link:hover{text-decoration:underline;}
+
+  .parts-table{width:100%;border-collapse:collapse;margin-bottom:8px;}
+  .parts-table th{font-size:11.5px;color:var(--ink-soft);text-align:left;font-weight:500;padding:0 8px 6px 0;}
+  .parts-table td{padding:0 8px 8px 0;vertical-align:top;}
+  .parts-table input{width:100%;font-family:var(--font);font-size:13.5px;padding:7px 8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);}
+  .parts-table td.rmcol{width:36px;padding-top:1px;}
+
+  /* image upload */
+  .dropzone{
+    border:1.5px dashed var(--line-strong);border-radius:10px;padding:22px;text-align:center;
+    color:var(--ink-soft);font-size:13px;cursor:pointer;background:var(--bg);
+  }
+  .dropzone:hover{border-color:var(--teal);color:var(--teal);}
+  .dropzone.drag{border-color:var(--teal);background:var(--teal-tint);color:var(--teal-dark);}
+  .thumbs{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:14px;}
+  .thumb{position:relative;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--surface);}
+  .thumb img{width:100%;height:130px;object-fit:cover;display:block;}
+  .thumb .cap-label{font-size:10.5px;color:var(--ink-faint);text-align:center;padding:4px 6px 0;background:var(--surface);}
+  .thumb textarea.cap-input{
+    width:100%;border:none;border-top:1px solid var(--line);background:var(--surface);
+    font-family:var(--font);font-size:12px;color:var(--ink);padding:6px 8px;resize:vertical;min-height:44px;
+  }
+  .thumb textarea.cap-input:focus{outline:1.5px solid var(--teal);outline-offset:-1.5px;}
+  .thumb .x{
+    position:absolute;top:4px;right:4px;width:20px;height:20px;border-radius:50%;
+    background:rgba(28,37,33,.65);color:#fff;border:none;font-size:13px;line-height:1;z-index:2;
+  }
+  .video-box{border:1px solid var(--line);border-radius:9px;padding:14px;background:var(--bg);}
+  .video-box video{width:100%;max-width:320px;border-radius:6px;display:block;margin-top:10px;}
+  .video-name{font-size:13px;font-weight:500;}
+  .video-note{font-size:12px;color:var(--ink-faint);margin-top:6px;}
+
+  .actionbar{display:flex;gap:10px;justify-content:flex-end;margin-top:22px;flex-wrap:wrap;}
+  .save-msg{font-size:12.5px;color:var(--teal);align-self:center;margin-right:auto;}
+  .save-msg.error{color:var(--rust);}
+
+  /* print report */
+  #printArea{display:none;}
+  @media print{
+    body *{visibility:hidden;}
+    #printArea, #printArea *{visibility:visible;}
+    #printArea{display:block;position:absolute;left:0;top:0;width:100%;padding:14mm;}
+  }
+  .pr-date{text-align:right;font-size:13px;}
+  .pr-to{font-size:14px;margin:10px 0 18px;}
+  .pr-title{text-align:center;font-size:19px;font-weight:700;border-bottom:2px solid #1C2521;padding-bottom:10px;margin-bottom:18px;}
+  .pr-lead{font-size:13.5px;margin-bottom:20px;}
+  .pr-h{font-size:15px;font-weight:700;margin:20px 0 10px;}
+  .pr-table{width:100%;border-collapse:collapse;margin-bottom:6px;font-size:13px;}
+  .pr-table th{width:140px;text-align:left;background:#F2F2F2;border:1px solid #999;padding:7px 10px;font-weight:700;}
+  .pr-table td{border:1px solid #999;padding:7px 10px;}
+  .pr-bullet{font-size:13.5px;margin:0 0 8px;}
+  .pr-parts th, .pr-parts td{border:1px solid #999;padding:6px 8px;font-size:12.5px;}
+  .pr-parts th{background:#F2F2F2;}
+  .pr-img-wrap{text-align:center;margin:16px 0;}
+  .pr-img-wrap img{max-width:260px;max-height:420px;}
+  .pr-cap{font-size:11.5px;color:#333;margin-top:4px;}
+  .pr-confirm{font-size:13.5px;margin:0 0 8px;}
+  .pr-video-note{font-size:12.5px;color:#333;margin-top:14px;}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div class="app-header">
+    <div class="brand">
+      <div class="digi">HYDRO6</div>
+      <div>
+        <h1>Hydro6 故障・修理報告 作成ツール</h1>
+        <p>サイブ株式会社 — 故障・修理報告の作成・保存</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn" id="btnNew">＋ 新規作成</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>保存済み報告書</h2>
+      <input type="text" id="searchInput" class="search-input" placeholder="お客様名・日付・S/Nで検索">
+      <div id="reportList"><div class="empty-list">読み込み中…</div></div>
+    </aside>
+
+    <main class="panel">
+      <div id="saveMsgTop"></div>
+
+      <form id="reportForm" onsubmit="return false;">
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">1</span><h3>基本情報</h3></div>
+          <div class="grid2">
+            <div class="field mono"><label>本体シリアル番号</label><input type="text" id="f_serialBody" placeholder="例：GZPN62CC25HE3BE"></div>
+            <div class="field mono"><label>コントローラ シリアル番号</label><input type="text" id="f_serialCtrl" placeholder="例：CTRLPN00000000"></div>
+            <div class="field"><label>お客様名</label><input type="text" id="f_customer" placeholder="例：〇〇商会　△△ 様（仮の例です）"></div>
+            <div class="field"><label>報告者</label><input type="text" id="f_reporter" value="サイブ株式会社　上田"></div>
+            <div class="field"><label>販売日</label><input type="date" id="f_saledate"></div>
+            <div class="field"><label>故障日</label><input type="date" id="f_faultdate"></div>
+            <div class="field"><label>報告日</label><input type="date" id="f_reportdate"></div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">2</span><h3>症状の内容</h3></div>
+          <div id="symptomList"></div>
+          <button type="button" class="add-link" id="addSymptom">＋ 症状を追加</button>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">3</span><h3>修理内容</h3></div>
+          <div id="repairList"></div>
+          <button type="button" class="add-link" id="addRepair">＋ 修理内容を追加</button>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">4</span><h3>添付画像</h3></div>
+          <div class="section-hint">タップまたはドラッグ＆ドロップで画像を追加できます（複数選択可）。画像だけでは伝わりにくいため、各画像に説明を入力してください。</div>
+          <div class="dropzone" id="dropzone">
+            画像をここにドラッグ、またはタップして選択
+            <input type="file" id="imageInput" accept="image/*" multiple style="display:none">
+          </div>
+          <div class="thumbs" id="thumbs"></div>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">5</span><h3>動画URL</h3></div>
+          <div class="section-hint">動画ファイルは保存できないため、Google DriveやWeTransferなどにアップロードした共有URLを入力してください。</div>
+          <div class="video-box">
+            <div class="field" style="margin-bottom:8px;"><input type="url" id="f_videoUrl" placeholder="例：https://drive.google.com/... または https://we.tl/..."></div>
+            <button type="button" class="btn small" id="btnOpenVideo">動画URLを開いて確認</button>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">6</span><h3>修理部品</h3></div>
+          <div class="section-hint">交換・手配が必要な部品があれば入力してください。</div>
+          <table class="parts-table">
+            <thead><tr><th style="width:32%">部品名</th><th style="width:26%">型番</th><th style="width:14%">数量</th><th>備考</th><th></th></tr></thead>
+            <tbody id="partsBody"></tbody>
+          </table>
+          <button type="button" class="add-link" id="addPart">＋ 部品を追加</button>
+        </div>
+
+        <div class="section">
+          <div class="section-title"><span class="section-num">7</span><h3>備考</h3></div>
+          <div id="remarksList"></div>
+          <button type="button" class="add-link" id="addRemark">＋ 項目を追加</button>
+        </div>
+
+      </form>
+
+      <div class="actionbar">
+        <span class="save-msg" id="saveMsg"></span>
+        <button class="btn" id="btnSave">下書きを保存</button>
+        <button class="btn" id="btnPrintCN">中国語で印刷・PDF保存</button>
+        <button class="btn primary" id="btnPrint">プレビュー / 印刷・PDF保存</button>
+      </div>
+    </main>
+  </div>
+</div>
+
+<div id="printArea"></div>
+
+<script>
+(function(){
+
+  var state = {
+    id: null,
+    seqNum: null,
+    serialBody: "", serialCtrl: "", customer: "", reporter: "サイブ株式会社　上田",
+    saledate: "", faultdate: "", reportdate: "",
+    symptoms: [""],
+    repairs: [""],
+    parts: [],
+    images: [],
+    videoUrl: "",
+    remarks: [""]
+  };
+
+  function todayStr(){
+    var d = new Date();
+    var m = String(d.getMonth()+1).padStart(2,"0");
+    var day = String(d.getDate()).padStart(2,"0");
+    return d.getFullYear()+"-"+m+"-"+day;
+  }
+  function jpDate(iso){
+    if(!iso) return "";
+    var p = iso.split("-");
+    if(p.length!==3) return iso;
+    return p[0]+"年"+parseInt(p[1],10)+"月"+parseInt(p[2],10)+"日";
+  }
+  function esc(s){
+    return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  // ---------- dynamic list helpers ----------
+  function renderSymptoms(){
+    var el = document.getElementById("symptomList");
+    el.innerHTML = "";
+    state.symptoms.forEach(function(val, i){
+      var row = document.createElement("div");
+      row.className = "dyn-row";
+      row.innerHTML = '<textarea rows="2" placeholder="症状を入力">'+esc(val)+'</textarea>'+
+        (state.symptoms.length>1 ? '<button type="button" class="rm-btn" title="削除">×</button>' : '');
+      var ta = row.querySelector("textarea");
+      ta.addEventListener("input", function(){ state.symptoms[i] = ta.value; });
+      var rm = row.querySelector(".rm-btn");
+      if(rm) rm.addEventListener("click", function(){ state.symptoms.splice(i,1); renderSymptoms(); });
+      el.appendChild(row);
+    });
+  }
+  function renderRepairs(){
+    var el = document.getElementById("repairList");
+    el.innerHTML = "";
+    state.repairs.forEach(function(val, i){
+      var row = document.createElement("div");
+      row.className = "dyn-row";
+      row.innerHTML = '<textarea rows="2" placeholder="修理内容を入力（例：制御基板を交換し、正常動作を確認）">'+esc(val)+'</textarea>'+
+        (state.repairs.length>1 ? '<button type="button" class="rm-btn" title="削除">×</button>' : '');
+      var ta = row.querySelector("textarea");
+      ta.addEventListener("input", function(){ state.repairs[i] = ta.value; });
+      var rm = row.querySelector(".rm-btn");
+      if(rm) rm.addEventListener("click", function(){ state.repairs.splice(i,1); renderRepairs(); });
+      el.appendChild(row);
+    });
+  }
+  function renderRemarks(){
+    var el = document.getElementById("remarksList");
+    el.innerHTML = "";
+    state.remarks.forEach(function(val, i){
+      var row = document.createElement("div");
+      row.className = "dyn-row";
+      row.innerHTML = '<textarea rows="2" placeholder="備考を入力">'+esc(val)+'</textarea>'+
+        (state.remarks.length>1 ? '<button type="button" class="rm-btn" title="削除">×</button>' : '');
+      var ta = row.querySelector("textarea");
+      ta.addEventListener("input", function(){ state.remarks[i] = ta.value; });
+      var rm = row.querySelector(".rm-btn");
+      if(rm) rm.addEventListener("click", function(){ state.remarks.splice(i,1); renderRemarks(); });
+      el.appendChild(row);
+    });
+  }
+  function renderParts(){
+    var body = document.getElementById("partsBody");
+    body.innerHTML = "";
+    state.parts.forEach(function(p, i){
+      var tr = document.createElement("tr");
+      tr.innerHTML =
+        '<td><input type="text" data-k="name" value="'+esc(p.name)+'" placeholder="例：制御基板"></td>'+
+        '<td><input type="text" data-k="model" value="'+esc(p.model)+'" placeholder="例：PM-CTRL-02"></td>'+
+        '<td><input type="text" data-k="qty" value="'+esc(p.qty)+'" placeholder="1"></td>'+
+        '<td><input type="text" data-k="note" value="'+esc(p.note)+'" placeholder="交換要 / 手配済み 等"></td>'+
+        '<td class="rmcol"><button type="button" class="rm-btn" title="削除">×</button></td>';
+      tr.querySelectorAll("input").forEach(function(inp){
+        inp.addEventListener("input", function(){ state.parts[i][inp.dataset.k] = inp.value; });
+      });
+      tr.querySelector(".rm-btn").addEventListener("click", function(){ state.parts.splice(i,1); renderParts(); });
+      body.appendChild(tr);
+    });
+  }
+
+  document.getElementById("addSymptom").addEventListener("click", function(){ state.symptoms.push(""); renderSymptoms(); });
+  document.getElementById("addRepair").addEventListener("click", function(){ state.repairs.push(""); renderRepairs(); });
+  document.getElementById("addRemark").addEventListener("click", function(){ state.remarks.push(""); renderRemarks(); });
+  document.getElementById("addPart").addEventListener("click", function(){ state.parts.push({name:"",model:"",qty:"",note:""}); renderParts(); });
+
+  // ---------- basic fields binding ----------
+  var basicIds = ["serialBody","serialCtrl","customer","reporter","saledate","faultdate","reportdate","videoUrl"];
+  basicIds.forEach(function(k){
+    var el = document.getElementById("f_"+k);
+    el.addEventListener("input", function(){ state[k] = el.value; });
+  });
+
+  function loadBasicFieldsFromState(){
+    basicIds.forEach(function(k){ document.getElementById("f_"+k).value = state[k] || ""; });
+  }
+
+  // ---------- images ----------
+  var dropzone = document.getElementById("dropzone");
+  var imageInput = document.getElementById("imageInput");
+  dropzone.addEventListener("click", function(){ imageInput.click(); });
+  dropzone.addEventListener("dragover", function(e){ e.preventDefault(); dropzone.classList.add("drag"); });
+  dropzone.addEventListener("dragleave", function(){ dropzone.classList.remove("drag"); });
+  dropzone.addEventListener("drop", function(e){
+    e.preventDefault(); dropzone.classList.remove("drag");
+    handleFiles(e.dataTransfer.files);
+  });
+  imageInput.addEventListener("change", function(){ handleFiles(imageInput.files); imageInput.value=""; });
+
+  function handleFiles(fileList){
+    Array.prototype.slice.call(fileList).forEach(function(file){
+      if(!file.type.startsWith("image/")) return;
+      var reader = new FileReader();
+      reader.onload = function(ev){
+        var img = new Image();
+        img.onload = function(){
+          var maxW = 900;
+          var scale = Math.min(1, maxW / img.width);
+          var canvas = document.createElement("canvas");
+          canvas.width = Math.round(img.width*scale);
+          canvas.height = Math.round(img.height*scale);
+          var ctx = canvas.getContext("2d");
+          ctx.drawImage(img,0,0,canvas.width,canvas.height);
+          var dataUrl = canvas.toDataURL("image/jpeg", 0.62);
+          state.images.push({dataUrl: dataUrl, caption: ""});
+          renderThumbs();
+        };
+        img.src = ev.target.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  function renderThumbs(){
+    var el = document.getElementById("thumbs");
+    el.innerHTML = "";
+    state.images.forEach(function(im, i){
+      var d = document.createElement("div");
+      d.className = "thumb";
+      d.innerHTML = '<img src="'+im.dataUrl+'" referrerpolicy="no-referrer">'+
+        '<div class="cap-label">写真'+(i+1)+'</div>'+
+        '<textarea class="cap-input" rows="2" placeholder="この画像の説明（例：コントロールパネルのE00表示）">'+esc(im.caption||"")+'</textarea>'+
+        '<button type="button" class="x" title="削除">×</button>';
+      d.querySelector(".cap-input").addEventListener("input", function(e){ state.images[i].caption = e.target.value; });
+      d.querySelector(".x").addEventListener("click", function(){ state.images.splice(i,1); renderThumbs(); });
+      el.appendChild(d);
+    });
+  }
+
+  // ---------- video URL ----------
+  document.getElementById("btnOpenVideo").addEventListener("click", function(){
+    if(!state.videoUrl){ showMsg("動画URLが入力されていません。", true); return; }
+    window.open(state.videoUrl, "_blank");
+  });
+
+  // ---------- backend (Google Apps Script) ----------
+  var GAS_URL = "https://script.google.com/macros/s/AKfycbzYOm6_OUVul3ZOVt5SNnjF6kLtoprtfonoQANUbeOYGLFXDF30V2qZxB05nfygWWjH/exec";
+
+  async function gasCall(payload){
+    try{
+      var res = await fetch(GAS_URL, {
+        method: "POST",
+        body: JSON.stringify(payload)
+      });
+      return await res.json();
+    }catch(err){
+      return { success:false, error: String(err) };
+    }
+  }
+
+  function showMsg(text, isError){
+    var el = document.getElementById("saveMsg");
+    el.textContent = text;
+    el.className = "save-msg" + (isError ? " error" : "");
+    setTimeout(function(){ el.textContent = ""; }, 4000);
+  }
+
+  function reportLabel(){
+    var d = jpDate(state.reportdate) || jpDate(todayStr());
+    return d + "　" + (state.customer || "お客様未入力");
+  }
+
+  async function saveReport(){
+    var payloadData = JSON.parse(JSON.stringify(state));
+    var sizeCheck = JSON.stringify(payloadData);
+    if(sizeCheck.length > 9000000){
+      showMsg("データが大きすぎて保存できません。画像を減らしてください。", true);
+      return;
+    }
+    showMsg("保存中…");
+    var r = await gasCall({ action: "save", data: payloadData });
+    if(!r || !r.success){
+      showMsg("保存に失敗しました。" + (r && r.error ? " ("+r.error+")" : ""), true);
+      return;
+    }
+    state.id = r.id;
+    state.seqNum = r.seqNum;
+    showMsg("下書きを保存しました。");
+    var list = await fetchList();
+    renderList(list);
+  }
+
+  async function fetchList(){
+    var r = await gasCall({ action: "list" });
+    return (r && r.success) ? r.list : [];
+  }
+
+  async function loadReport(id){
+    var r = await gasCall({ action: "get", id: id });
+    if(!r || !r.success){ showMsg("読み込みに失敗しました。", true); return; }
+    var data = r.data;
+    state = Object.assign({
+      id:null,seqNum:null,serialBody:"",serialCtrl:"",customer:"",reporter:"サイブ株式会社　上田",
+      saledate:"",faultdate:"",reportdate:"",symptoms:[""],repairs:[""],parts:[],images:[],videoUrl:"",remarks:[""]
+    }, data);
+    if(!state.repairs || !state.repairs.length) state.repairs=[""];
+    if(!state.remarks || !state.remarks.length) state.remarks=[""];
+    if(!state.symptoms || !state.symptoms.length) state.symptoms=[""];
+    renderAll();
+    var list = await fetchList();
+    renderList(list);
+  }
+
+  async function deleteReport(id, ev){
+    ev.stopPropagation();
+    if(!confirm("この報告書を削除しますか？")) return;
+    var pw = window.prompt("削除にはパスワードが必要です。");
+    if(pw === null) return;
+    var r = await gasCall({ action: "delete", id: id, password: pw });
+    if(!r || !r.success){ showMsg("削除に失敗しました。" + (r && r.error ? " ("+r.error+")" : ""), true); return; }
+    var list = await fetchList();
+    renderList(list);
+    if(state.id === id){ resetForm(); }
+  }
+
+  var currentIndex = [];
+
+  function renderList(idx){
+    currentIndex = idx || [];
+    applyFilterAndRender();
+  }
+
+  function applyFilterAndRender(){
+    var q = (document.getElementById("searchInput").value || "").trim().toLowerCase();
+    var list = currentIndex;
+    if(q){
+      list = currentIndex.filter(function(m){
+        var hay = ((m.label||"") + " " + (m.sub||"") + " " + (m.date||"")).toLowerCase();
+        return hay.indexOf(q) !== -1;
+      });
+    }
+    renderListItems(list);
+  }
+
+  function renderListItems(idx){
+    var el = document.getElementById("reportList");
+    if(!idx || !idx.length){
+      el.innerHTML = '<div class="empty-list">'+(currentIndex.length ? "該当する報告書がありません。" : "保存された報告書はありません。")+'</div>';
+      return;
+    }
+    el.innerHTML = "";
+    idx.sort(function(a,b){ return (b.updatedAt||0)-(a.updatedAt||0); });
+    idx.forEach(function(m){
+      var d = document.createElement("div");
+      d.className = "report-item" + (state.id===m.id ? " active" : "");
+      d.innerHTML = '<div><div class="ri-title">'+(m.seqNum ? '<span class="ri-seq">No.'+m.seqNum+'</span> ' : '')+esc(m.label)+'</div><div class="ri-sub">'+esc(m.sub ? ("S/N "+m.sub) : "")+'</div></div>'+
+        '<button type="button" class="ri-del" title="削除">×</button>';
+      d.addEventListener("click", function(){ loadReport(m.id); });
+      d.querySelector(".ri-del").addEventListener("click", function(e){ deleteReport(m.id, e); });
+      el.appendChild(d);
+    });
+  }
+
+  function resetForm(){
+    state = {
+      id:null, seqNum:null, serialBody:"", serialCtrl:"", customer:"", reporter:"サイブ株式会社　上田",
+      saledate:"", faultdate:"", reportdate: todayStr(),
+      symptoms:[""], repairs:[""], parts:[], images:[], videoUrl:"", remarks:[""]
+    };
+    renderAll();
+    fetchList().then(renderList);
+  }
+
+  function renderAll(){
+    loadBasicFieldsFromState();
+    renderSymptoms();
+    renderRepairs();
+    renderRemarks();
+    renderParts();
+    renderThumbs();
+  }
+
+  document.getElementById("btnSave").addEventListener("click", saveReport);
+  document.getElementById("btnNew").addEventListener("click", resetForm);
+  document.getElementById("searchInput").addEventListener("input", applyFilterAndRender);
+
+  // ---------- print / preview ----------
+  document.getElementById("btnPrint").addEventListener("click", async function(){
+    showMsg("画像を読み込み中…しばらくお待ちください");
+    buildPrintArea("ja", state);
+    await waitForImages();
+    showMsg("");
+    window.print();
+  });
+
+  document.getElementById("btnPrintCN").addEventListener("click", async function(){
+    showMsg("中国語に翻訳中…しばらくお待ちください");
+    var r = await gasCall({ action: "translate", data: state });
+    if(!r || !r.success){
+      showMsg("翻訳に失敗しました。" + (r && r.error ? " ("+r.error+")" : ""), true);
+      return;
+    }
+    showMsg("画像を読み込み中…しばらくお待ちください");
+    buildPrintArea("zh", r.data);
+    await waitForImages();
+    showMsg("");
+    window.print();
+  });
+
+  function waitForImages(){
+    var imgs = document.querySelectorAll("#printArea img");
+    var promises = Array.prototype.map.call(imgs, function(img){
+      if(img.complete && img.naturalWidth > 0) return Promise.resolve();
+      return new Promise(function(resolve){
+        img.addEventListener("load", resolve);
+        img.addEventListener("error", resolve);
+        setTimeout(resolve, 8000); // フォールバック（最大8秒待って進める）
+      });
+    });
+    return Promise.all(promises);
+  }
+
+  var LABELS = {
+    ja: {
+      title: "Hydro6　故障・修理報告書",
+      lead: "下記の通り、Hydro6 にて不具合が発生しましたのでご報告いたします。",
+      h: ["","基本情報","症状の内容","修理内容","添付画像","動画URL","修理部品","備考"],
+      serialBody:"本体シリアル番号", serialCtrl:"コントローラ シリアル番号", customer:"お客様名",
+      reporter:"報告者", saledate:"販売日", faultdate:"故障日", reportdate:"報告日",
+      photo:"写真", parts:["部品名","型番","数量","備考"]
+    },
+    zh: {
+      title: "Hydro6　故障・维修报告书",
+      lead: "现将 Hydro6 发生的故障情况报告如下。",
+      h: ["","基本信息","故障现象","维修内容","附件图片","视频链接","维修零件","备注"],
+      serialBody:"本体序列号", serialCtrl:"控制器序列号", customer:"客户名称",
+      reporter:"报告人", saledate:"销售日期", faultdate:"故障日期", reportdate:"报告日期",
+      photo:"图", parts:["零件名称","型号","数量","备注"]
+    }
+  };
+
+  function buildPrintArea(lang, data){
+    var L = LABELS[lang] || LABELS.ja;
+    var html = "";
+    html += '<div class="pr-date">'+ (jpDate(data.reportdate) || jpDate(todayStr())) +'</div>';
+    html += '<div class="pr-title">'+L.title+(data.seqNum ? '（No.'+data.seqNum+'）' : '')+'</div>';
+    html += '<div class="pr-lead">'+L.lead+'</div>';
+
+    html += '<div class="pr-h">１．'+L.h[1]+'</div>';
+    html += '<table class="pr-table"><tbody>';
+    html += trow(L.serialBody, data.serialBody);
+    html += trow(L.serialCtrl, data.serialCtrl);
+    html += trow(L.customer, data.customer);
+    html += trow(L.reporter, data.reporter);
+    if(data.saledate) html += trow(L.saledate, jpDate(data.saledate));
+    if(data.faultdate) html += trow(L.faultdate, jpDate(data.faultdate));
+    html += trow(L.reportdate, jpDate(data.reportdate) || jpDate(todayStr()));
+    html += '</tbody></table>';
+
+    html += '<div class="pr-h">２．'+L.h[2]+'</div>';
+    (data.symptoms||[]).filter(function(s){return s && s.trim();}).forEach(function(s){
+      html += '<div class="pr-bullet">・'+esc(s)+'</div>';
+    });
+
+    html += '<div class="pr-h">３．'+L.h[3]+'</div>';
+    (data.repairs||[]).filter(function(s){return s && s.trim();}).forEach(function(s){
+      html += '<div class="pr-bullet">・'+esc(s)+'</div>';
+    });
+
+    html += '<div class="pr-h">４．'+L.h[4]+'</div>';
+    if(data.images && data.images.length){
+      data.images.forEach(function(im, i){
+        var capText = L.photo+(i+1) + (im.caption ? "："+esc(im.caption) : "");
+        html += '<div class="pr-img-wrap"><img src="'+im.dataUrl+'" referrerpolicy="no-referrer"><div class="pr-cap">'+capText+'</div></div>';
+      });
+    }
+
+    html += '<div class="pr-h">５．'+L.h[5]+'</div>';
+    if(data.videoUrl){
+      html += '<div class="pr-bullet"><a href="'+esc(data.videoUrl)+'">'+esc(data.videoUrl)+'</a></div>';
+    }
+
+    if(data.parts && data.parts.filter(function(p){return p.name||p.model||p.qty||p.note;}).length){
+      html += '<div class="pr-h">６．'+L.h[6]+'</div>';
+      html += '<table class="pr-parts" style="width:100%;border-collapse:collapse;margin-bottom:10px;"><thead><tr><th>'+L.parts[0]+'</th><th>'+L.parts[1]+'</th><th>'+L.parts[2]+'</th><th>'+L.parts[3]+'</th></tr></thead><tbody>';
+      data.parts.forEach(function(p){
+        if(!(p.name||p.model||p.qty||p.note)) return;
+        html += '<tr><td>'+esc(p.name)+'</td><td>'+esc(p.model)+'</td><td>'+esc(p.qty)+'</td><td>'+esc(p.note)+'</td></tr>';
+      });
+      html += '</tbody></table>';
+    }
+
+    html += '<div class="pr-h">７．'+L.h[7]+'</div>';
+    (data.remarks||[]).filter(function(c){return c && c.trim();}).forEach(function(c){
+      html += '<div class="pr-bullet">・'+esc(c)+'</div>';
+    });
+
+    document.getElementById("printArea").innerHTML = html;
+  }
+  function trow(label, val){
+    return '<tr><th>'+label+'</th><td>'+esc(val||"")+'</td></tr>';
+  }
+
+  // ---------- init ----------
+  async function init(){
+    state.reportdate = todayStr();
+    renderAll();
+    document.getElementById("reportList").innerHTML = '<div class="empty-list">読み込み中…</div>';
+    var list = await fetchList();
+    renderList(list);
+  }
+  init();
+
+})();
+</script>
+</body>
+</html>
