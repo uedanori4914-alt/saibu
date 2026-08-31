@@ -1,0 +1,15 @@
+{
+  "name": "ACE600 故障・修理報告 作成ツール",
+  "short_name": "ACE600修理",
+  "id": "/saibu/ace600/",
+  "start_url": "./ACE600_故障報告書作成ツール_4.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#17332F",
+  "theme_color": "#0E6E77",
+  "lang": "ja",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
